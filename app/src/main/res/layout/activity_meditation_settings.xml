@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activities.MeditationDetailActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainBlueColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            app:srcCompat="@drawable/back_arrow_icon"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Update Meditation Settings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_13sdp">
+
+            <!-- Lottie Animation -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/cat_anim" />
+
+            <!-- Brief Note about Meditation -->
+            <TextView
+                android:id="@+id/tvAffirmationNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Meditation is a practice where an individual uses a technique – such as mindfulness, or focusing the mind on a particular object, thought, or activity – to train attention and awareness, and achieve a mentally clear and emotionally calm and stable state. Select your preferences below:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <!-- Meditation Frequency -->
+            <TextView
+                android:id="@+id/tvFrequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="How often do you meditate?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioGroup
+                android:id="@+id/rgFrequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbDaily"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/dailyMeditate"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbTwiceDaily"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/twice_a_day_meditate"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbWeekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/weeklyMeditate"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbNever"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/neverMeditate"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+            </RadioGroup>
+
+
+            <!-- Meditation Goals -->
+            <TextView
+                android:id="@+id/tvMeditationGoals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What are your meditation goals?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/baloo_bhai"
+                android:layout_marginTop="@dimen/_13sdp" />
+
+            <CheckBox
+                android:id="@+id/cbStressRelief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/stress_relief"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/cbAnxietyReduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/anxiety_reduction"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/cbMindfulness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/mindfulness"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/cbEmotionalBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/emotional_balance"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <!-- Preferred Time of Day -->
+            <TextView
+                android:id="@+id/tvPreferredTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preferred time of day for meditation"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/baloo_bhai"
+                android:layout_marginTop="@dimen/_13sdp" />
+
+            <RadioGroup
+                android:id="@+id/rgPreferredTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbMorning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/morning"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbAfternoon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/afternoon"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbEvening"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/evening"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+            </RadioGroup>
+
+            <!-- Meditation Time -->
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="Preferred Meditation Session Length"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioGroup
+                android:id="@+id/rgTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb5Minutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/_5_minutes"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rb10Minutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/_10_minutes"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rb15Minutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/_15_minutes"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rb20Minutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/_20_minutes"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+            </RadioGroup>
+
+            <!-- Meditation Techniques -->
+            <TextView
+                android:id="@+id/tvTechniques"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="Preferred Meditation Types"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <CheckBox
+                android:id="@+id/cbGuidedMeditation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/guided_meditation"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/cbBreathingExercises"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/breathing_exercises"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/cbBodyScanMeditation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/body_scan_meditation"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/cbLovingKindnessMeditation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/loving_kindness_meditation"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Preferences"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:backgroundTint="@color/mainBlueColor"
+                android:textColor="@color/white"
+                android:fontFamily="@font/baloo_bhai"
+                android:layout_marginBottom="@dimen/_20sdp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

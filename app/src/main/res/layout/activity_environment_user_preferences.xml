@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainBlueColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            app:srcCompat="@drawable/back_arrow_icon"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="@string/nature_amp_environment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/_12sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/cat_anim" />
+
+            <TextView
+                android:id="@+id/tvPersonalizationNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/amaranth"
+                android:text="Nature &amp; Environment play a crucial role in mental health. A healthy environment reduces stress, promotes physical activity, and enhances overall well-being. By connecting with nature and making eco-friendly choices, we not only protect our planet but also improve our mental health and quality of life. Select your preferences below:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/question1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="How often do you engage in activities related to mental health (e.g., meditation, therapy, affirmations)?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioGroup
+                android:id="@+id/rgEngagementFrequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbDaily"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/daily"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbWeekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/weekly"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbMonthly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/monthly"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbRarely"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/rarely"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+            </RadioGroup>
+
+            <!-- Question 2 -->
+            <TextView
+                android:id="@+id/question2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="How important is connecting with nature to you?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioGroup
+                android:id="@+id/rgNatureImportance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbVeryImportant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/very_important"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbSomewhatImportant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/somewhat_important"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbNotVeryImportant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/not_very_important"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbNotImportant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/not_important"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+            </RadioGroup>
+
+            <!-- Question 3 -->
+            <TextView
+                android:id="@+id/question3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="Which areas of nature and environment are you most interested in? (Select all that apply)"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <CheckBox
+                android:id="@+id/cbRecyclingWasteReduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/recycling_and_waste_reduction"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/cbEnergyConservation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/energy_conservation"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/cbSustainableLiving"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/sustainable_living"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/cbClimateChangeAwareness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/climate_change_awareness"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/cbWildlifeConservation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/wildlife_conservation"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/cbOutdoorActivities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amaranth"
+                android:text="@string/outdoor_activities"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <!-- Question 4 -->
+            <TextView
+                android:id="@+id/question4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="@string/how_do_you_prefer_to_receive_information_on_nature_and_environmental_topics"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioGroup
+                android:id="@+id/rgInformationPreference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbArticles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/articles"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbStories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/stories"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbShortNovels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="@string/short_novels"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+            </RadioGroup>
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:backgroundTint="@color/mainBlueColor"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="Save and Continue"
+                android:textSize="@dimen/_14sdp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

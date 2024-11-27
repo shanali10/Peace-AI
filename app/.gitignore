@@ -1,0 +1,60 @@
+# Gradle files
+.gradle/
+build/
+*/build/
+!.gradle/
+*.jar
+*.war
+*.ear
+
+# Local configuration file (sdk path, api keys, etc)
+local.properties
+
+# Android Studio project files
+/.idea
+.DS_Store
+
+# Ignore all Kotlin build and cache files
+*.iml
+out/
+.idea/
+*.hprof
+*.log
+*.apk
+*.ap_
+*.dex
+*.class
+*.swp
+*.swo
+*.tmp
+*.temp
+*.orig
+*.rej
+captures/
+.externalNativeBuild/
+*.so
+*.o
+*.lo
+*.la
+*.lai
+*.ll
+*.llist
+.lfs/
+*.dylib
+.yarn/
+
+# Google Services (e.g. API keys, etc.)
+google-services.json
+
+# Signing keys
+*.jks
+
+# Crashlytics
+com_crashlytics_export_strings.xml
+
+# Intellij
+*.ipr
+*.iws
+captured
+android/build
+node_modules/

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/_12sdp"
+    tools:context=".Activities.TherapySessionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:src="@drawable/therapy_session_design" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Please provide your feedback on the session:"
+            android:textSize="@dimen/_15sdp" />
+
+        <EditText
+            android:id="@+id/feedbackInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/edit_text_bg"
+            android:fontFamily="@font/actor"
+            android:gravity="top"
+            android:hint="Your feedback"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:backgroundTint="@color/mainBlueColor"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Submit"
+            android:textSize="@dimen/_12sdp"
+            tools:ignore="TextSizeCheck" />
+    </LinearLayout>
+</ScrollView>

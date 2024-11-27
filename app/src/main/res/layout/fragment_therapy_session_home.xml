@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.TherapySessionHomeFragment">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_75sdp"
+        android:src="@drawable/therapy_session_design"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="Welcome to AI Therapist"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_17sdp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="@font/actor"
+        android:text="The AI Therapist is a cutting-edge feature designed to support your mental health journey through intelligent, empathetic, and personalized interactions. As part of the Mental Health Companion app, the AI Therapist provides a unique blend of convenience, privacy, and expert guidance, available to you anytime and anywhere."
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/continueBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:text="Continue to Session"
+        android:backgroundTint="@color/mainBlueColor"
+        android:fontFamily="@font/baloo_bhai"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

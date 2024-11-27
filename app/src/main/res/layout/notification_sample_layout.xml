@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_15sdp"
+    android:layout_margin="@dimen/_6sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/profile_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/notificationDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Shan Ali Mughal has commented on your post"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_image"
+            app:layout_constraintTop_toTopOf="@+id/profile_image"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/notificationTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:fontFamily="@font/amaranth"
+            android:text="1 hour ago"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@+id/notificationDescription"
+            app:layout_constraintStart_toStartOf="@+id/notificationDescription"
+            app:layout_constraintTop_toBottomOf="@+id/notificationDescription"
+            tools:ignore="TextSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

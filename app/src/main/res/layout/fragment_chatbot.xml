@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.ChatbotFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatbotRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/edit_text_bg"
+        android:ems="10"
+        android:fontFamily="@font/amaranth"
+        android:hint="Ask me anything..."
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="@dimen/_10sdp"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mic_icon"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="Hello Shan,\nI am Your,\nMental Health ChatBot AI 💖\n\nAsk Me Anything 💬"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatbotPlaceholderIcon" />
+
+    <ImageView
+        android:id="@+id/chatbotPlaceholderIcon"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/chatbot_placeholder"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mic_icon"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:src="@drawable/mic_icon"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextText" />
+
+    <ImageView
+        android:id="@+id/send_icon"
+        android:layout_width="@dimen/_37sdp"
+        android:layout_height="@dimen/_37sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:src="@drawable/send_icon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

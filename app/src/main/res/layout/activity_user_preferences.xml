@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/_13sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_13sdp">
+
+        <!-- Lottie Animation -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_140sdp"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/cat_anim" />
+
+        <!-- User Profession -->
+        <TextView
+            android:id="@+id/tvProfession"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="What is your profession?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/etProfession"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:hint="Enter your profession"
+            android:textSize="@dimen/_13sdp"
+            android:inputType="text"
+            android:minHeight="@dimen/_37sdp" />
+
+        <!-- Mood Selection -->
+        <TextView
+            android:id="@+id/tvMood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="How are you feeling today?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+        <RadioGroup
+            android:id="@+id/rgMood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbHappy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="Happy"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/rbSad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="Sad"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/rbAnxious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="Anxious"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/rbStressed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="Stressed"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/rbCalm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="Calm"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/rbTired"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="Tired"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+        </RadioGroup>
+
+        <!-- Personal Goals -->
+        <TextView
+            android:id="@+id/tvGoals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="What are your current personal goals?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+        <CheckBox
+            android:id="@+id/cbSelfLove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:text="Self-Love"
+            android:textSize="@dimen/_11sdp"
+            tools:ignore="TextSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/cbConfidence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:text="Confidence"
+            android:textSize="@dimen/_11sdp"
+            tools:ignore="TextSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/cbProductivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:text="Productivity"
+            android:textSize="@dimen/_11sdp"
+            tools:ignore="TextSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/cbGratitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:text="Gratitude"
+            android:textSize="@dimen/_11sdp"
+            tools:ignore="TextSizeCheck" />
+
+        <!-- Sleep Patterns -->
+        <TextView
+            android:id="@+id/tvSleep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="How many hours do you sleep each night?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/etSleep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:hint="Enter hours of sleep"
+            android:textSize="@dimen/_13sdp"
+            android:inputType="number"
+            android:minHeight="@dimen/_37sdp" />
+
+        <!-- Physical Activity -->
+        <TextView
+            android:id="@+id/tvActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="How often do you exercise?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+        <RadioGroup
+            android:id="@+id/rgExerciseFrequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbDailyExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="Daily"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/rbFewTimesWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="A few times a week"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/rbWeeklyExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="Once a week"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/rbNoExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="Rarely or never"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+        </RadioGroup>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:textSize="@dimen/_14sdp"
+            android:backgroundTint="@color/mainBlueColor"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Save Preferences" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/hello_animation" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="Sign-In"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animationView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signinPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:hint="Enter your password"
+            android:inputType="text|textPassword"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/amaranth"
+        android:text="Forgot password?"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/inputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout2"
+        tools:ignore="TextSizeCheck" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/forgotPassword"
+        app:layout_constraintStart_toStartOf="@+id/forgotPassword"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
+
+    <Button
+        android:id="@+id/signInBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="Sign In"
+        android:backgroundTint="@color/mainBlueColor"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="@+id/inputLayout2"
+        app:layout_constraintStart_toStartOf="@+id/inputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/createNewAccountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/amaranth"
+        android:text="Don't have account? Create New"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/signInBtn"
+        app:layout_constraintTop_toBottomOf="@+id/signInBtn"
+        tools:ignore="TextSizeCheck" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/createNewAccountText"
+        app:layout_constraintStart_toStartOf="@+id/createNewAccountText"
+        app:layout_constraintTop_toBottomOf="@+id/createNewAccountText" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="Or Sign-In with Google"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/signInBtn"
+        app:layout_constraintStart_toStartOf="@+id/signInBtn"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        tools:ignore="TextSizeCheck" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:background="@color/black"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/inputLayout2"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:background="@color/black"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/inputLayout2"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <ImageView
+        android:id="@+id/googleSignInBtn"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/google_icon" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signinEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:hint="Enter your email"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

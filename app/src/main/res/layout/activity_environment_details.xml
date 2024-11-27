@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activities.EnvironmentDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainBlueColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            app:srcCompat="@drawable/back_arrow_icon"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Read Full Content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_12sdp">
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:src="@drawable/nature_design" />
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="Nature &amp; Environment:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginTop="@dimen/_1sdp">
+
+                <ImageView
+                    android:id="@+id/copy_icon_env"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    app:srcCompat="@drawable/copy_icon"
+                    app:tint="@color/redColor" />
+
+                <ImageView
+                    android:id="@+id/share_icon_env"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    app:srcCompat="@drawable/share_icon"
+                    app:tint="@color/redColor" />
+
+                <ImageView
+                    android:id="@+id/play_icon_env"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    app:srcCompat="@drawable/play_icon"
+                    app:tint="@color/redColor" />
+
+                <ImageView
+                    android:id="@+id/pause_icon_env"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/pause_icon"
+                    app:tint="@color/redColor" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/envDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/actor"
+                android:text="Summary details will be displayed here."
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                tools:ignore="TextSizeCheck" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

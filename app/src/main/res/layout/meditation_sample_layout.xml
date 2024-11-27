@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_6sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_20sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/meditationThumbnail"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:civ_border_width="@dimen/_1sdp"
+            android:src="@drawable/meditation_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/meditationTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Meditation Title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/meditationThumbnail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/meditationGoals"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:fontFamily="@font/amaranth"
+            android:text="Meditation Goals:"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/redColor"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/meditationThumbnail"
+            app:layout_constraintTop_toBottomOf="@+id/meditationTitle"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/sleepHours"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:fontFamily="@font/amaranth"
+            android:text="Sleep Hours:"
+            android:textColor="@color/redColor"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/meditationThumbnail"
+            app:layout_constraintTop_toBottomOf="@+id/meditationGoals"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/meditationDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:fontFamily="@font/amaranth"
+            android:text="Meditation Duration:"
+            android:textColor="@color/redColor"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/meditationThumbnail"
+            app:layout_constraintTop_toBottomOf="@+id/sleepHours"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/meditationDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/balsamiq_sans_bold"
+            android:paddingStart="@dimen/_12sdp"
+            android:text="Meditation Detail:"
+            android:textColor="@color/blueColor"
+            android:textSize="@dimen/_11sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/buttonLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/meditationThumbnail"
+            app:layout_constraintTop_toBottomOf="@+id/meditationDuration"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/balsamiq_sans_bold"
+            android:paddingStart="@dimen/_12sdp"
+            android:text="Last Meditation Progress:"
+            android:textColor="@color/blueColor"
+            android:textSize="@dimen/_11sdp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/meditationThumbnail"
+            app:layout_constraintTop_toBottomOf="@+id/meditationDuration"
+            tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:paddingStart="@dimen/_12sdp"
+            android:progress="0"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/progress"
+            app:layout_constraintStart_toStartOf="@+id/progress"
+            app:layout_constraintTop_toBottomOf="@+id/progress"
+            tools:ignore="RtlSymmetry" />
+
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="@+id/meditationTitle"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar">
+
+            <Button
+                android:id="@+id/viewDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/mainBlueColor"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="Start Now"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/mental_health_companion_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/mental_health_companion_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MentalHealthCompanion"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activities.VerifyEmailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.EnvironmentDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.EnvironmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.EnvironmentUserPreferencesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.TherapySummaryDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.TherapySessionHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.TherapySessionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.CommentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.CommunityForumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.PersonalInfoSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MeditationSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.AffirmationSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.FavoriteAffirmationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.FavoriteMeditationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MeditationDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.UserPreferencesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.MainActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name=".BackgroundTasks.DailyResetJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name=".BackgroundTasks.MidnightResetReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MIDNIGHT_RESET" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

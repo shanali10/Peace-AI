@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/actor</item>
+        <item>@font/alata</item>
+        <item>@font/alef_bold</item>
+        <item>@font/alice</item>
+        <item>@font/amaranth</item>
+        <item>@font/baloo_bhai</item>
+        <item>@font/balsamiq_sans_bold</item>
+    </array>
+</resources>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.CommentsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/mainBlueColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backArrowIcon"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow_icon"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/communityTopText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="Comments"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/backArrowIcon"
+        app:layout_constraintStart_toEndOf="@+id/backArrowIcon"
+        app:layout_constraintTop_toTopOf="@+id/backArrowIcon" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutBg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:visibility="invisible"
+                tools:ignore="MissingConstraints">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/profile_placeholder"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:text="User Name..."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/profile_image"
+                    app:layout_constraintTop_toTopOf="@+id/profile_image" />
+
+                <TextView
+                    android:id="@+id/postTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:fontFamily="@font/amaranth"
+                    android:text="post time..."
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/userName"
+                    app:layout_constraintStart_toStartOf="@+id/userName"
+                    app:layout_constraintTop_toBottomOf="@+id/userName"
+                    tools:ignore="TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/postDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/actor"
+                    android:text="lorem ipsum lorem ipsum construct sklfjdlkjkl fdsjlkjkl dsfajkljlk klsafkdl kljfsdlk jlkasj sfdkjakljlk sfadlkj lfkljlkfsaj dlkjlkjdsfkl ajlkj dsfkjl sfdlkaj lkjlkfdsj lkjlkj lkjsfalkd jkjlkj saflkj sdfkjalk jlkj sdlkfj ksjfdlkjkl sadfk kjdsfakl jlkjlk;jdsaf jlkjlskf dajlk dsfklaj kljlkjsfa l;jlkjsdflkaj ldsafj kljkljfsakl jlkjfaslkjlkdasfjlk jdsfkl jakljsdfalk j fsdljljdsfadlkjsfkl jlfs"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+                <ImageView
+                    android:id="@+id/heartIcon"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="@+id/postDescription"
+                    app:layout_constraintTop_toBottomOf="@+id/postDescription"
+                    app:srcCompat="@drawable/like_icon" />
+
+                <ImageView
+                    android:id="@+id/heartIconFilled"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="@+id/postDescription"
+                    app:layout_constraintTop_toBottomOf="@+id/postDescription"
+                    app:srcCompat="@drawable/like_icon_filled" />
+
+                <TextView
+                    android:id="@+id/totalLikesText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/amaranth"
+                    android:text="24 Likes"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/heartIcon"
+                    app:layout_constraintStart_toEndOf="@+id/heartIcon"
+                    app:layout_constraintTop_toTopOf="@+id/heartIcon"
+                    tools:ignore="TextSizeCheck" />
+
+                <ImageView
+                    android:id="@+id/commentIcon"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/heartIcon"
+                    app:layout_constraintStart_toEndOf="@+id/totalLikesText"
+                    app:layout_constraintTop_toTopOf="@+id/heartIcon"
+                    app:srcCompat="@drawable/comment_icon" />
+
+                <TextView
+                    android:id="@+id/totalCommentsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/amaranth"
+                    android:text="Comments"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/commentIcon"
+                    app:layout_constraintStart_toEndOf="@+id/commentIcon"
+                    app:layout_constraintTop_toTopOf="@+id/commentIcon"
+                    tools:ignore="TextSizeCheck" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/commentsRecycler"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/editTextText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutBg"
+                app:layout_constraintVertical_bias="0.103"
+                tools:ignore="NotSibling" />
+
+
+            <TextView
+                android:id="@+id/noCommentsText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/actor"
+                android:gravity="center"
+                android:text="No Comments Found"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="invisible"
+                android:layout_marginTop="@dimen/_150sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/commentsRecycler"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutBg"
+                tools:ignore="TextSizeCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/edit_text_bg"
+        android:ems="10"
+        android:fontFamily="@font/amaranth"
+        android:hint="Write your thoughts..."
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="@dimen/_10sdp"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mic_icon"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/mic_icon"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:src="@drawable/mic_icon"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextText" />
+
+    <ImageView
+        android:id="@+id/send_icon"
+        android:layout_width="@dimen/_37sdp"
+        android:layout_height="@dimen/_37sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:src="@drawable/send_icon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

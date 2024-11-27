@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activities.MeditationDetailActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainBlueColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            app:srcCompat="@drawable/back_arrow_icon"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Start Your Meditation"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:padding="@dimen/_12sdp">
+
+            <!-- Meditation Image with Rounded Corners -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="@dimen/_3sdp">
+
+                <ImageView
+                    android:id="@+id/meditationImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/meditation_placeholder" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Meditation Title -->
+            <TextView
+                android:id="@+id/meditationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="Meditation Title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+
+            <!-- Meditation Goal -->
+            <TextView
+                android:id="@+id/meditationGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/amaranth"
+                android:text="Goal: Stress Relief"
+                android:textColor="@color/redColor"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <!-- Meditation Duration -->
+            <TextView
+                android:id="@+id/meditationDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:fontFamily="@font/amaranth"
+                android:text="Duration: 10 minutes"
+                android:textColor="@color/redColor"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <!-- Timer and Start Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="vertical">
+
+                <!-- Timer -->
+                <TextView
+                    android:id="@+id/timerTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:gravity="center"
+                    android:text="10:00 Minutes Duration"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16sdp" />
+
+                <!-- Start Button -->
+                <Button
+                    android:id="@+id/startButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/mainBlueColor"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:gravity="center"
+                    android:text="Start Meditation"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    tools:ignore="TextSizeCheck" />
+
+            </LinearLayout>
+
+            <!-- Meditation Details -->
+
+            <TextView
+                android:id="@+id/meditationDetailsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:fontFamily="@font/balsamiq_sans_bold"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:text="Meditation Details:"
+
+                android:textColor="@color/blueColor"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginTop="@dimen/_1sdp">
+
+                <ImageView
+                    android:id="@+id/copy_icon"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    app:srcCompat="@drawable/copy_icon"
+                    app:tint="@color/redColor" />
+
+                <ImageView
+                    android:id="@+id/share_icon"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    app:srcCompat="@drawable/share_icon"
+                    app:tint="@color/redColor" />
+
+                <ImageView
+                    android:id="@+id/play_icon"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    app:srcCompat="@drawable/play_icon"
+                    app:tint="@color/redColor" />
+
+                <ImageView
+                    android:id="@+id/pause_icon"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/pause_icon"
+                    app:tint="@color/redColor" />
+
+                <ImageView
+                    android:id="@+id/favorite_icon"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/_3sdp"
+                    app:srcCompat="@drawable/favorite_icon"
+                    app:tint="@color/redColor" />
+
+                <ImageView
+                    android:id="@+id/favorite_icon_filled"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/_3sdp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/favorite_icon_filled"
+                    app:tint="@color/redColor" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/meditationDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/balsamiq_sans_bold"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                android:textColor="@color/blueColor"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

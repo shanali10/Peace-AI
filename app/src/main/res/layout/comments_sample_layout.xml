@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_6sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_5sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/profile_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Shan Ali Mughal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_image"
+            app:layout_constraintTop_toTopOf="@+id/profile_image" />
+
+        <TextView
+            android:id="@+id/postTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:fontFamily="@font/amaranth"
+            android:text="1 hour ago"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="@+id/userName"
+            app:layout_constraintStart_toStartOf="@+id/userName"
+            app:layout_constraintTop_toBottomOf="@+id/userName"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/postDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/actor"
+            android:text="lorem ipsum lorem ipsum construct sklfjdlkjkl fdsjlkjkl dsfajkljlk klsafkdl kljfsdlk jlkasj sfdkjakljlk sfadlkj lfkljlkfsaj dlkjlkjdsfkl ajlkj dsfkjl sfdlkaj lkjlkfdsj lkjlkj lkjsfalkd jkjlkj saflkj sdfkjalk jlkj sdlkfj ksjfdlkjkl sadfk kjdsfakl jlkjlk;jdsaf jlkjlskf dajlk dsfklaj kljlkjsfa l;jlkjsdflkaj ldsafj kljkljfsakl jlkjfaslkjlkdasfjlk jdsfkl jakljsdfalk j fsdljljdsfadlkjsfkl jlfs"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

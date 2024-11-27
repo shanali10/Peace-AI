@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfileIcon"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/profile_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userPromptText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:background="@drawable/user_prompt_bg"
+        android:fontFamily="@font/actor"
+        android:padding="@dimen/_7sdp"
+        android:gravity="end"
+        android:text="jklasdfjkljk fdskljklasdfjklj kllj kfdsalkjkj sdfkljlk jjsdlkajlkkjjkljsdafklj kjasfdlkjkljsadfkl jksjdaflk jkljlkdfsaj kjas dfkljklj kdsflajlkj kljasdf lkjkl jfdsa"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintEnd_toStartOf="@+id/userProfileIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/userProfileIcon"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/playUserPrompt"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="@+id/userPromptText"
+        app:layout_constraintTop_toBottomOf="@+id/userPromptText"
+        app:srcCompat="@drawable/play_icon"
+        app:tint="@color/blueColor" />
+
+    <ImageView
+        android:id="@+id/pauseUserPrompt"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="@+id/userPromptText"
+        app:layout_constraintTop_toBottomOf="@+id/userPromptText"
+        app:srcCompat="@drawable/pause_icon"
+        android:visibility="invisible"
+        app:tint="@color/blueColor" />
+
+    <ImageView
+        android:id="@+id/shareUserPrompt"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        app:layout_constraintEnd_toStartOf="@+id/playUserPrompt"
+        app:layout_constraintTop_toBottomOf="@+id/userPromptText"
+        app:srcCompat="@drawable/share_icon"
+        app:tint="@color/blueColor" />
+
+    <ImageView
+        android:id="@+id/copyUserPrompt"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        app:layout_constraintEnd_toStartOf="@+id/shareUserPrompt"
+        app:layout_constraintTop_toBottomOf="@+id/userPromptText"
+        app:srcCompat="@drawable/copy_icon"
+        app:tint="@color/blueColor" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/chatbot_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shareUserPrompt" />
+
+    <TextView
+        android:id="@+id/responseText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:background="@drawable/ai_response_bg"
+        android:padding="@dimen/_7sdp"
+        android:text="jlajsdfkjkjlk dsjflkjk dasfkjkljlk jasflkdjlkj dsakljlk askdjfklj sdafjkl safjlkj kl jasfdjkl jdaskljfkl jadsfkljkl jasfjd lkjklafjsd ;lasj f;ljklaj sfdkljklasdfj kljlk sdfjajaksl dfjlkj sadfkjkl j"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintEnd_toEndOf="@+id/userProfileIcon"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="@+id/profile_image"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/copyResponseText"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintStart_toStartOf="@+id/responseText"
+        app:layout_constraintTop_toBottomOf="@+id/responseText"
+        app:srcCompat="@drawable/copy_icon"
+        app:tint="@color/blueColor" />
+
+    <ImageView
+        android:id="@+id/shareResponseText"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintStart_toEndOf="@+id/copyResponseText"
+        app:layout_constraintTop_toBottomOf="@+id/responseText"
+        app:srcCompat="@drawable/share_icon"
+        app:tint="@color/blueColor" />
+
+    <ImageView
+        android:id="@+id/playResponseText"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintStart_toEndOf="@+id/shareResponseText"
+        app:layout_constraintTop_toBottomOf="@+id/responseText"
+        app:srcCompat="@drawable/play_icon"
+        app:tint="@color/blueColor" />
+
+    <ImageView
+        android:id="@+id/pauseResponseText"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintStart_toEndOf="@+id/shareResponseText"
+        app:layout_constraintTop_toBottomOf="@+id/responseText"
+        app:srcCompat="@drawable/pause_icon"
+        android:visibility="invisible"
+        app:tint="@color/blueColor" />
+
+    <ImageView
+        android:id="@+id/deleteResponseText"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintStart_toEndOf="@+id/playResponseText"
+        app:layout_constraintTop_toBottomOf="@+id/responseText"
+        app:srcCompat="@drawable/delete_icon"
+        app:tint="@color/blueColor" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shareResponseText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

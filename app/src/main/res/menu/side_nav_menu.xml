@@ -1,0 +1,53 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/therapySession"
+        android:icon="@drawable/therapy_icon"
+        android:title="@string/therapy_session_with_ai" />
+
+    <item
+        android:id="@+id/natureAndEnvironment"
+        android:icon="@drawable/nature_icon"
+        android:title="@string/nature_amp_environment" />
+
+    <item
+        android:id="@+id/community"
+        android:icon="@drawable/community_icon"
+        android:title="@string/community" />
+
+    <item
+        android:id="@+id/therapyHistory"
+        android:icon="@drawable/history_icon"
+        android:title="@string/therapy_session_history" />
+
+    <item
+        android:id="@+id/favoriteAffirmations"
+        android:icon="@drawable/favorite_icon"
+        android:title="@string/favorite_affirmations" />
+
+    <item
+        android:id="@+id/favoriteMeditations"
+        android:icon="@drawable/favorite_icon"
+        android:title="@string/favorite_meditations" />
+
+    <item
+        android:id="@+id/personalInfoSettings"
+        android:icon="@drawable/settings_icon"
+        android:title="@string/personal_info_settings" />
+
+    <item
+        android:id="@+id/affirmationSettings"
+        android:icon="@drawable/settings_icon"
+        android:title="@string/affirmation_settings" />
+
+    <item
+        android:id="@+id/meditationSettings"
+        android:icon="@drawable/settings_icon"
+        android:title="@string/meditation_settings" />
+
+    <item
+        android:id="@+id/logOut"
+        android:icon="@drawable/logout_icon"
+        android:title="@string/logout" />
+</menu>

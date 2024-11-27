@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.VerifyEmailActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_75sdp"
+        android:layout_marginTop="@dimen/_100sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/verify_email_icon" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="Verify your Email Address"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_17sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/veryficationLinkText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/actor"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:text="@string/verify_email_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:backgroundTint="@color/mainBlueColor"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="Log in if verified →"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/veryficationLinkText"
+        tools:ignore="TextSizeCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

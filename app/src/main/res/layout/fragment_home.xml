@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_1sdp">
+
+        <!-- User Profile Section -->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/profile_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/add_profile_button"
+            app:layout_constraintEnd_toEndOf="@+id/add_profile_button"
+            app:layout_constraintStart_toStartOf="@+id/add_profile_button"
+            app:layout_constraintTop_toTopOf="@+id/add_profile_button" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Hello, User"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_image"
+            app:layout_constraintTop_toTopOf="@+id/profile_image"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/user_profession"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:fontFamily="@font/amaranth"
+            android:gravity="right"
+            android:text="(Profession)"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="@+id/user_name"
+            app:layout_constraintStart_toStartOf="@+id/user_name"
+            app:layout_constraintTop_toBottomOf="@+id/user_name"
+            tools:ignore="TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/add_profile_button"
+            android:layout_width="@dimen/_19sdp"
+            android:layout_height="@dimen/_19sdp"
+            android:src="@drawable/add_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+            app:layout_constraintEnd_toEndOf="@+id/profile_image" />
+
+
+        <!-- Lottie Animation -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_profession"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/meditation_anim" />
+
+        <!-- CardView for Personal Preferences -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_personal_preferences"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/animationView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="Personal Preferences"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <TextView
+                    android:id="@+id/personalGoals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="Personal Goals:"
+                    android:textColor="@color/blueColor"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/mood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:text="Mood: "
+                    android:textColor="@color/blueColor"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sleepHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:text="Sleep Hours: "
+                    android:textColor="@color/blueColor"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/excerciseFrequency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:text="Exercise Frequency: "
+                    android:textColor="@color/blueColor"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/therapyBg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@+id/card_personal_preferences"
+            tools:layout_editor_absoluteX="1sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutBg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/ai_therapist_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="AI Therapist"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image2"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/therapy_session_design"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ai_therapist_title" />
+
+                <TextView
+                    android:id="@+id/therapySummary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:text="Last Therapy Session (Summary)\n(View Summary)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/profile_image2"
+                    app:layout_constraintTop_toTopOf="@+id/profile_image2"
+                    tools:ignore="TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/therapyTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/amaranth"
+                    android:text="Session Time: 1 hour ago"
+                    android:textColor="@color/blueColor"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/therapySummary"
+                    app:layout_constraintStart_toStartOf="@+id/therapySummary"
+                    app:layout_constraintTop_toBottomOf="@+id/therapySummary"
+                    tools:ignore="TextSizeCheck" />
+
+                <Button
+                    android:id="@+id/startTherapy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:backgroundTint="@color/mainBlueColor"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:text="Start Therapy"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/therapyTime"
+                    app:layout_constraintTop_toBottomOf="@+id/therapyTime"
+                    tools:ignore="TextSizeCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView for Last Time Meditation -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lastMeditationCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:visibility="visible"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/therapyBg"
+            app:layout_goneMarginTop="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_12sdp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/last_time_meditation_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="Last Meditation Details"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/meditationThumbnail"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginEnd="@dimen/_13sdp"
+                        android:src="@drawable/meditation_placeholder" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/meditationTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo_bhai"
+                            android:text="Meditation Title"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+                            android:id="@+id/meditationGoalsLastMeditation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/amaranth"
+                            android:text="Meditation Goals:"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/_11sdp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/sleepHoursLastMeditation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:fontFamily="@font/amaranth"
+                            android:text="Sleep Hours:"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/_11sdp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/meditationDuration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:fontFamily="@font/amaranth"
+                            android:text="Meditation Duration:"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/_11sdp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/meditationDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/balsamiq_sans_bold"
+                            android:paddingStart="@dimen/_12sdp"
+                            android:text="Meditation Detail:"
+                            android:textColor="@color/blueColor"
+                            android:textSize="@dimen/_11sdp"
+                            android:visibility="gone"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/balsamiq_sans_bold"
+                            android:text="Last Meditation Progress:"
+                            android:textColor="@color/blueColor"
+                            android:textSize="@dimen/_11sdp"
+                            android:visibility="visible"
+                            tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:progress="0" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttonLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_3sdp">
+
+                    <Button
+                        android:id="@+id/viewDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/mainBlueColor"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:text="Start Again"
+                        android:textSize="@dimen/_11sdp"
+                        tools:ignore="TextSizeCheck" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- CardView for Last Time Meditation Date -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lastTimeMed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lastMeditationCardView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="Last Time Meditated"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <TextView
+                    android:id="@+id/lastMeditationDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth"
+                    android:text="2 days ago"
+                    android:textColor="@color/blueColor"
+                    android:textSize="@dimen/_11sdp"
+                    tools:ignore="TextSizeCheck" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_13sdp">
+
+        <!-- Lottie Animation -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/cat_anim" />
+
+        <!-- Brief Note about Affirmations -->
+        <TextView
+            android:id="@+id/tvAffirmationNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Affirmations are positive statements that can help you challenge and overcome negative thoughts. They can be used to increase confidence, improve self-esteem, and help you develop a more positive mindset. Select your preferences below:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            tools:ignore="TextSizeCheck" />
+
+        <!-- Affirmation Themes -->
+        <TextView
+            android:id="@+id/tvThemes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Which themes of affirmations resonate with you the most?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+        <CheckBox
+            android:id="@+id/cbMotivation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:text="Motivation"
+            android:textSize="@dimen/_11sdp"
+            tools:ignore="TextSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/cbRelaxation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:text="Relaxation"
+            android:textSize="@dimen/_11sdp"
+            tools:ignore="TextSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/cbSelfEsteem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:text="Self-Esteem"
+            android:textSize="@dimen/_11sdp"
+            tools:ignore="TextSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/cbPositivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:text="Positivity"
+            android:textSize="@dimen/_11sdp"
+            tools:ignore="TextSizeCheck" />
+
+        <!-- Affirmation Style -->
+        <TextView
+            android:id="@+id/tvStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="How do you prefer your affirmations?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+        <RadioGroup
+            android:id="@+id/rgStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbShortSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="Short and Simple"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/rbDetailed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="Detailed"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/rbStoryLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="Story-Like"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="TextSizeCheck" />
+        </RadioGroup>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Preferences"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:backgroundTint="@color/mainBlueColor"
+            android:textColor="@color/white"
+            android:fontFamily="@font/baloo_bhai"
+            android:layout_marginBottom="@dimen/_20sdp" />
+    </LinearLayout>
+</ScrollView>

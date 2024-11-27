@@ -1,0 +1,22 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/home_icon" />
+
+    <item
+        android:id="@+id/mediation"
+        android:title="@string/mediation"
+        android:icon="@drawable/meditation_icon" />
+
+    <item
+        android:id="@+id/chatbot"
+        android:title="@string/chatbot"
+        android:icon="@drawable/chatbot_icon" />
+
+    <item
+        android:id="@+id/affirmation"
+        android:title="@string/affirmation"
+        android:icon="@drawable/affirmation_icon" />
+</menu>
