@@ -88,6 +88,7 @@ class TherapyQuestionsFragment : Fragment(), TextToSpeech.OnInitListener {
         progressDialog.setMessage("AI is thinking...")
         progressDialog.setCancelable(false)
 
+        // initializing progress bar
         val progressBar = requireActivity().findViewById<ProgressBar>(R.id.progressBar)
         progressBar.progress = 50
 

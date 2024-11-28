@@ -64,6 +64,7 @@ class AffirmationFragment : Fragment() {
         sharedPreferences = requireContext().getSharedPreferences("userPrefs", Context.MODE_PRIVATE)
         editor = sharedPreferences.edit()
 
+        // getting personal information of the user
 
         profession = sharedPreferences.getString("profession", "").toString()
         mood = sharedPreferences.getString("mood", "").toString()
